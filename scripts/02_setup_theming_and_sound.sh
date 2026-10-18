@@ -37,15 +37,26 @@ gsettings set org.gnome.shell.extensions.dash-to-dock isolate-monitors true
 gsettings set org.gnome.shell.extensions.dash-to-dock multi-monitor true
 
 echo "=========================================================================="
-echo " [5/5] Applying Authentic Ubuntu Shortcuts & Startup Login Music..."
+echo " [5/5] Injecting Authentic Ubuntu Shortcuts & Startup Login Music..."
 echo "=========================================================================="
-# Ubuntu specific keybindings extracted from your machine
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(dirname "${SCRIPT_DIR}")"
+DCONF_SHORTCUTS="${REPO_ROOT}/configs/ubuntu_exact_shortcuts.dconf"
+
+if [ -f "$DCONF_SHORTCUTS" ] && command -v dconf &>/dev/null; then
+    echo "Loading full shortcuts profile from ${DCONF_SHORTCUTS}..."
+    dconf load / < "$DCONF_SHORTCUTS" || true
+fi
+
+# Explicit fallback bindings
 gsettings set org.gnome.settings-daemon.plugins.media-keys terminal "['<Alt>t']" || true
 gsettings set org.gnome.settings-daemon.plugins.media-keys control-center "['<Super>x']" || true
 gsettings set org.gnome.settings-daemon.plugins.media-keys search "['<Super>s']" || true
 gsettings set org.gnome.settings-daemon.plugins.media-keys www "['<Alt>i']" || true
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute "['<Control>m']" || true
 gsettings set org.gnome.settings-daemon.plugins.media-keys play "['<Control>p']" || true
+gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']" || true
+gsettings set org.gnome.desktop.wm.keybindings close "['<Alt>AudioRaiseVolume']" || true
 
 # Ubuntu login instrumental music autostart (warty-startup or desktop-login)
 mkdir -p "${HOME}/.config/autostart"
@@ -63,4 +74,13 @@ EOF
 echo ""
 echo "=========================================================================="
 echo " [SUCCESS] Ubuntu theming, dock, shortcuts, and bootup sound configured!"
+echo " Injected shortcuts:"
+echo "   Alt + t             -> Launch Terminal"
+echo "   Super + x           -> Settings / Control Center"
+echo "   Super + s           -> Search"
+echo "   Alt + i             -> Web Browser"
+echo "   Ctrl + m            -> Mute Volume"
+echo "   Ctrl + p            -> Play/Pause Media"
+echo "   Super + d           -> Show Desktop"
+echo "   Alt + VolUp         -> Close Window"
 echo "=========================================================================="
