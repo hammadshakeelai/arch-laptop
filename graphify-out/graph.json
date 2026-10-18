@@ -1,0 +1,377 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "01_post_install.sh",
+      "file_type": "code",
+      "source_file": "scripts/01_post_install.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_01_post_install",
+      "community": 1,
+      "norm_label": "01_post_install.sh"
+    },
+    {
+      "label": "01_post_install.sh script",
+      "file_type": "code",
+      "source_file": "scripts/01_post_install.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_01_post_install_sh__entry",
+      "community": 1,
+      "norm_label": "01_post_install.sh script"
+    },
+    {
+      "label": "02_setup_theming_and_sound.sh",
+      "file_type": "code",
+      "source_file": "scripts/02_setup_theming_and_sound.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_02_setup_theming_and_sound",
+      "community": 2,
+      "norm_label": "02_setup_theming_and_sound.sh"
+    },
+    {
+      "label": "02_setup_theming_and_sound.sh script",
+      "file_type": "code",
+      "source_file": "scripts/02_setup_theming_and_sound.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_02_setup_theming_and_sound_sh__entry",
+      "community": 2,
+      "norm_label": "02_setup_theming_and_sound.sh script"
+    },
+    {
+      "label": "03_setup_jupyter_cling.sh",
+      "file_type": "code",
+      "source_file": "scripts/03_setup_jupyter_cling.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_03_setup_jupyter_cling",
+      "community": 0,
+      "norm_label": "03_setup_jupyter_cling.sh"
+    },
+    {
+      "label": "03_setup_jupyter_cling.sh script",
+      "file_type": "code",
+      "source_file": "scripts/03_setup_jupyter_cling.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_03_setup_jupyter_cling_sh__entry",
+      "community": 0,
+      "norm_label": "03_setup_jupyter_cling.sh script"
+    },
+    {
+      "label": "MAMBA_ROOT_PREFIX",
+      "file_type": "code",
+      "source_file": "scripts/03_setup_jupyter_cling.sh",
+      "source_location": "L14",
+      "metadata": {
+        "language": "bash",
+        "kind": "code"
+      },
+      "_origin": "ast",
+      "id": "scripts_03_setup_jupyter_cling_mamba_root_prefix",
+      "community": 0,
+      "norm_label": "mamba_root_prefix"
+    },
+    {
+      "label": "04_launch_jupyter_vscode.sh",
+      "file_type": "code",
+      "source_file": "scripts/04_launch_jupyter_vscode.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_04_launch_jupyter_vscode",
+      "community": 3,
+      "norm_label": "04_launch_jupyter_vscode.sh"
+    },
+    {
+      "label": "04_launch_jupyter_vscode.sh script",
+      "file_type": "code",
+      "source_file": "scripts/04_launch_jupyter_vscode.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_04_launch_jupyter_vscode_sh__entry",
+      "community": 3,
+      "norm_label": "04_launch_jupyter_vscode.sh script"
+    },
+    {
+      "label": "05_setup_dosbox_assembly.sh",
+      "file_type": "code",
+      "source_file": "scripts/05_setup_dosbox_assembly.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_05_setup_dosbox_assembly",
+      "community": 4,
+      "norm_label": "05_setup_dosbox_assembly.sh"
+    },
+    {
+      "label": "05_setup_dosbox_assembly.sh script",
+      "file_type": "code",
+      "source_file": "scripts/05_setup_dosbox_assembly.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_05_setup_dosbox_assembly_sh__entry",
+      "community": 4,
+      "norm_label": "05_setup_dosbox_assembly.sh script"
+    },
+    {
+      "label": "06_setup_virtualization.sh",
+      "file_type": "code",
+      "source_file": "scripts/06_setup_virtualization.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_06_setup_virtualization",
+      "community": 5,
+      "norm_label": "06_setup_virtualization.sh"
+    },
+    {
+      "label": "06_setup_virtualization.sh script",
+      "file_type": "code",
+      "source_file": "scripts/06_setup_virtualization.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_06_setup_virtualization_sh__entry",
+      "community": 5,
+      "norm_label": "06_setup_virtualization.sh script"
+    },
+    {
+      "label": "07_setup_tailscale_rdp.sh",
+      "file_type": "code",
+      "source_file": "scripts/07_setup_tailscale_rdp.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_07_setup_tailscale_rdp",
+      "community": 6,
+      "norm_label": "07_setup_tailscale_rdp.sh"
+    },
+    {
+      "label": "07_setup_tailscale_rdp.sh script",
+      "file_type": "code",
+      "source_file": "scripts/07_setup_tailscale_rdp.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_07_setup_tailscale_rdp_sh__entry",
+      "community": 6,
+      "norm_label": "07_setup_tailscale_rdp.sh script"
+    },
+    {
+      "label": "08_install_all_software.sh",
+      "file_type": "code",
+      "source_file": "scripts/08_install_all_software.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_08_install_all_software",
+      "community": 7,
+      "norm_label": "08_install_all_software.sh"
+    },
+    {
+      "label": "08_install_all_software.sh script",
+      "file_type": "code",
+      "source_file": "scripts/08_install_all_software.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_08_install_all_software_sh__entry",
+      "community": 7,
+      "norm_label": "08_install_all_software.sh script"
+    },
+    {
+      "label": "backup_old_arch.sh",
+      "file_type": "code",
+      "source_file": "scripts/backup_old_arch.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_backup_old_arch",
+      "community": 8,
+      "norm_label": "backup_old_arch.sh"
+    },
+    {
+      "label": "backup_old_arch.sh script",
+      "file_type": "code",
+      "source_file": "scripts/backup_old_arch.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_backup_old_arch_sh__entry",
+      "community": 8,
+      "norm_label": "backup_old_arch.sh script"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/01_post_install.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_01_post_install",
+      "target": "scripts_01_post_install_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/02_setup_theming_and_sound.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_02_setup_theming_and_sound",
+      "target": "scripts_02_setup_theming_and_sound_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/03_setup_jupyter_cling.sh",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "scripts_03_setup_jupyter_cling",
+      "target": "scripts_03_setup_jupyter_cling_mamba_root_prefix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/03_setup_jupyter_cling.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_03_setup_jupyter_cling",
+      "target": "scripts_03_setup_jupyter_cling_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/04_launch_jupyter_vscode.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_04_launch_jupyter_vscode",
+      "target": "scripts_04_launch_jupyter_vscode_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/05_setup_dosbox_assembly.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_05_setup_dosbox_assembly",
+      "target": "scripts_05_setup_dosbox_assembly_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/06_setup_virtualization.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_06_setup_virtualization",
+      "target": "scripts_06_setup_virtualization_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/07_setup_tailscale_rdp.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_07_setup_tailscale_rdp",
+      "target": "scripts_07_setup_tailscale_rdp_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/08_install_all_software.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_08_install_all_software",
+      "target": "scripts_08_install_all_software_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/backup_old_arch.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_backup_old_arch",
+      "target": "scripts_backup_old_arch_sh__entry",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "a54e1df61782d4a8c5321dafc7edc009bbea0deb"
+}

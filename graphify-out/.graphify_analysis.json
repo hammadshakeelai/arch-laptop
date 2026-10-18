@@ -1,0 +1,109 @@
+{
+  "communities": {
+    "0": [
+      "scripts_03_setup_jupyter_cling",
+      "scripts_03_setup_jupyter_cling_mamba_root_prefix",
+      "scripts_03_setup_jupyter_cling_sh__entry"
+    ],
+    "1": [
+      "scripts_01_post_install",
+      "scripts_01_post_install_sh__entry"
+    ],
+    "2": [
+      "scripts_02_setup_theming_and_sound",
+      "scripts_02_setup_theming_and_sound_sh__entry"
+    ],
+    "3": [
+      "scripts_04_launch_jupyter_vscode",
+      "scripts_04_launch_jupyter_vscode_sh__entry"
+    ],
+    "4": [
+      "scripts_05_setup_dosbox_assembly",
+      "scripts_05_setup_dosbox_assembly_sh__entry"
+    ],
+    "5": [
+      "scripts_06_setup_virtualization",
+      "scripts_06_setup_virtualization_sh__entry"
+    ],
+    "6": [
+      "scripts_07_setup_tailscale_rdp",
+      "scripts_07_setup_tailscale_rdp_sh__entry"
+    ],
+    "7": [
+      "scripts_08_install_all_software",
+      "scripts_08_install_all_software_sh__entry"
+    ],
+    "8": [
+      "scripts_backup_old_arch",
+      "scripts_backup_old_arch_sh__entry"
+    ]
+  },
+  "cohesion": {
+    "0": 0.6666666666666666,
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0
+  },
+  "gods": [
+    {
+      "id": "scripts_01_post_install_sh__entry",
+      "label": "01_post_install.sh script",
+      "degree": 1
+    },
+    {
+      "id": "scripts_02_setup_theming_and_sound_sh__entry",
+      "label": "02_setup_theming_and_sound.sh script",
+      "degree": 1
+    },
+    {
+      "id": "scripts_03_setup_jupyter_cling_sh__entry",
+      "label": "03_setup_jupyter_cling.sh script",
+      "degree": 1
+    },
+    {
+      "id": "scripts_03_setup_jupyter_cling_mamba_root_prefix",
+      "label": "MAMBA_ROOT_PREFIX",
+      "degree": 1
+    },
+    {
+      "id": "scripts_04_launch_jupyter_vscode_sh__entry",
+      "label": "04_launch_jupyter_vscode.sh script",
+      "degree": 1
+    },
+    {
+      "id": "scripts_05_setup_dosbox_assembly_sh__entry",
+      "label": "05_setup_dosbox_assembly.sh script",
+      "degree": 1
+    },
+    {
+      "id": "scripts_06_setup_virtualization_sh__entry",
+      "label": "06_setup_virtualization.sh script",
+      "degree": 1
+    },
+    {
+      "id": "scripts_07_setup_tailscale_rdp_sh__entry",
+      "label": "07_setup_tailscale_rdp.sh script",
+      "degree": 1
+    },
+    {
+      "id": "scripts_08_install_all_software_sh__entry",
+      "label": "08_install_all_software.sh script",
+      "degree": 1
+    },
+    {
+      "id": "scripts_backup_old_arch_sh__entry",
+      "label": "backup_old_arch.sh script",
+      "degree": 1
+    }
+  ],
+  "surprises": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

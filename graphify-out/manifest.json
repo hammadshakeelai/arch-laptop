@@ -1,0 +1,52 @@
+{
+  "configs/jupyter_cxx_kernel.json": {
+    "mtime": 1792320055.0518165,
+    "ast_hash": "d15cd98fc9d0645162d939c8a1e1f4b9",
+    "semantic_hash": "d15cd98fc9d0645162d939c8a1e1f4b9"
+  },
+  "scripts/01_post_install.sh": {
+    "mtime": 1792320008.1496441,
+    "ast_hash": "f5e31bf8e9968b3927783407339f893c",
+    "semantic_hash": "f5e31bf8e9968b3927783407339f893c"
+  },
+  "scripts/02_setup_theming_and_sound.sh": {
+    "mtime": 1792320019.289122,
+    "ast_hash": "c9823dc7d4e7ce00a5130188e61e6c0a",
+    "semantic_hash": "c9823dc7d4e7ce00a5130188e61e6c0a"
+  },
+  "scripts/03_setup_jupyter_cling.sh": {
+    "mtime": 1792319791.5546744,
+    "ast_hash": "2bdb3f5a98cfa1818dcaf75f86573130",
+    "semantic_hash": "2bdb3f5a98cfa1818dcaf75f86573130"
+  },
+  "scripts/04_launch_jupyter_vscode.sh": {
+    "mtime": 1792319796.9515617,
+    "ast_hash": "9d96bc511f1bed9774f4a87204f38c71",
+    "semantic_hash": "9d96bc511f1bed9774f4a87204f38c71"
+  },
+  "scripts/05_setup_dosbox_assembly.sh": {
+    "mtime": 1792319921.8085651,
+    "ast_hash": "cc42d02ce9f05ecfe3214937541dd20e",
+    "semantic_hash": "cc42d02ce9f05ecfe3214937541dd20e"
+  },
+  "scripts/06_setup_virtualization.sh": {
+    "mtime": 1792319948.1203463,
+    "ast_hash": "83de7ee0d6cc02e45448536585417bb4",
+    "semantic_hash": "83de7ee0d6cc02e45448536585417bb4"
+  },
+  "scripts/07_setup_tailscale_rdp.sh": {
+    "mtime": 1792319970.5916786,
+    "ast_hash": "b4392bfe9d37608cef389e050d517fcb",
+    "semantic_hash": "b4392bfe9d37608cef389e050d517fcb"
+  },
+  "scripts/08_install_all_software.sh": {
+    "mtime": 1792320028.4601367,
+    "ast_hash": "19b2138a1db4fe91fdaf00964094be13",
+    "semantic_hash": "19b2138a1db4fe91fdaf00964094be13"
+  },
+  "scripts/backup_old_arch.sh": {
+    "mtime": 1792319727.2784019,
+    "ast_hash": "48ac71723cce4720e2c97368559f74c7",
+    "semantic_hash": "48ac71723cce4720e2c97368559f74c7"
+  }
+}
