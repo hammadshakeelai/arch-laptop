@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=pw-play /usr/share/sounds/yaru/stereo/desktop-login.oga
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Ubuntu Startup Sound
+Comment=Plays the authentic Ubuntu startup instrument music on login

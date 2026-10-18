@@ -1,0 +1,19 @@
+# AUR Package Manifest
+
+# Themes & Desktop Integration
+yaru-gtk-theme
+yaru-icon-theme
+yaru-sound-theme
+gdm-settings
+
+# Applications
+onlyoffice-bin
+vscodium-bin
+sublime-text-4
+github-desktop-bin
+spotify
+google-earth-pro
+
+# Optional GNOME Shell Extensions via AUR
+gnome-shell-extension-dash-to-dock
+gnome-shell-extension-coverflow-alt-tab-git

@@ -1,0 +1,45 @@
+# Base & Development Tools
+base-devel
+git
+neovim
+vim
+terminator
+byobu
+htop
+ghex
+texstudio
+chromium
+firefox
+baobab
+extension-manager
+gnome-tweaks
+gnome-remote-desktop
+dosbox
+nasm
+wget
+curl
+unzip
+tar
+rsync
+jq
+pipewire
+pipewire-pulse
+pipewire-alsa
+wireplumber
+zram-generator
+
+# Virtualization
+qemu-full
+libvirt
+virt-manager
+virt-viewer
+dnsmasq
+iptables-nft
+bridge-utils
+dmidecode
+
+# Networking
+tailscale
+networkmanager
+avahi
+nss-mdns
