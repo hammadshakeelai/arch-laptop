@@ -1,0 +1,16 @@
+apg
+byobu
+ccze
+claude-code
+gnome-shell-extension-compiz-windows-effect-git
+hollywood
+lib32-libexif
+lib32-libxslt
+lib32-mpg123
+lib32-nss-mdns
+lib32-openal
+lib32-v4l-utils
+onlyoffice-bin
+speedometer
+yay
+yay-debug
