@@ -1,115 +1,88 @@
-# Arch Linux Laptop Setup & Migration Knowledge Base
+# Arch Linux Workstation & Migration Master Repository
 
-A turnkey, production-grade blueprint and automation suite for installing, configuring, and maintaining an Arch Linux development workstation. Replicates the familiar Ubuntu aesthetics, desktop environment, and boot sound while leveraging the speed, minimal footprint, and bleeding-edge AUR ecosystem of Arch Linux.
+A turnkey, production-grade blueprint, migration history, and automation suite for the **MECHREVO R14P / Code 01** (AMD Ryzen 5 7430U, 8GB RAM, unified 171GB Btrfs NVMe pool).
 
----
-
-## 🧭 Knowledge Base Directory
-
-| Guide | Description | Key Focus |
-| :--- | :--- | :--- |
-| [01. Storage & Partitioning](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/01-storage-and-partitioning.md) | Permanent fix for root space issues | Unified single-drive layout, Ext4 vs Btrfs, ZRAM swap |
-| [02. Arch Installation Walkthrough](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/02-arch-installation-guide.md) | Step-by-step base install guide | UEFI, `pacstrap`, locales, user setup, `systemd-boot` / GRUB |
-| [03. Pre-Reinstall Salvage Guide](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/03-backup-old-arch.md) | Backup procedures before formatting | VM export, GNOME dconf, SSH keys, dotfiles |
-| [04. Ubuntu Look & Theming](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/04-ubuntu-look-and-theming.md) | Desktop replication on GNOME | Centered bottom dock, Yaru GTK/Icons/Shell, GNOME Tweaks |
-| [05. Circular Alt-Tab Switchers](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/05-circular-alt-tab-switcher.md) | Social media "circular" window switchers | Fly-Pie radial menu, Coverflow 3D Alt-Tab, AATWS |
-| [06. Bootup & Login Instrumental Music](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/06-bootup-login-music.md) | Authentic startup chime restoration | PipeWire / PulseAudio autostart with Yaru login audio |
-| [07. Jupyter C++ Cling & VS Code](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/07-jupyter-cpp-cling-vscode.md) | Interactive C++ kernel in notebooks | Micromamba, `xeus-cling`, LLVM/Clang integration, VS Code |
-| [08. Claude Science MCP Environment](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/08-claude-science-environment.md) | Scientific tooling & Agent sidecars | Mol* 3D structure viewer, PubChem, AlphaFold, `uv` |
-| [09. 8086 Assembly (DOSBox, NASM, AFD)](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/09-dosbox-nasm-afd-setup.md) | Low-level systems programming | Real-mode 8086, NASM compilation, AFD visual debugger |
-| [10. QEMU/KVM Virtual Machine Migration](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/10-qemu-kvm-vm-migration.md) | Restoring the `ubuntu-vm` | Libvirt, Virt-Manager, `.qcow2` restoration, NAT networking |
-| [11. Tailscale & Remote Desktop (RDP)](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/11-tailscale-and-remote-desktop.md) | Remote access from Windows / mobile | Headless Tailscale mesh, native GNOME RDP (`grdctl`) |
-| [12. Software Catalog (Pacman & AUR)](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/12-software-catalog-pacman-aur.md) | Package mapping for all tools | OnlyOffice, VSCodium, Spotify, Sublime, TeXstudio, etc. |
+This repository preserves the complete record of the migration from Ubuntu to Arch Linux, replicates the familiar Ubuntu aesthetics and startup chime, and provides a Windows-user-optimized productivity suite along with a fully local, offline AI stack (PewDiePie's Odysseus AI + Ollama 3B Abliterated).
 
 ---
 
-## 🚀 Step-by-Step Migration & Reinstall Workflow
+## 📚 Complete Conversation & Knowledge Base
 
-### Phase 1: On Your Current Arch Laptop (Before Wiping)
-Run the automated backup script to save your VM, configurations, and scripts:
-```bash
-git clone https://github.com/<your-username>/arch-laptop.git ~/arch-laptop-repo
-cd ~/arch-laptop-repo
-chmod +x scripts/backup_old_arch.sh
-sudo ./scripts/backup_old_arch.sh
-```
-*Copy `~/arch_backup_ready.tar.gz` and your VM disk `/var/lib/libvirt/images/ubuntu-vm.qcow2` to an external USB drive.*
+| Resource | Description |
+| :--- | :--- |
+| **[FULL_CHAT_LOG.md](FULL_CHAT_LOG.md)** | **Complete, verbatim conversation record** (940+ steps) covering every decision, command, debugging step, and fix from start to finish. |
+| **[Windows Experience Blueprint](docs/windows_user_complete_linux_experience.md)** | Detailed gap analysis and solutions for Windows power users moving to Arch Linux (fonts, shortcuts, search, phone link, and office). |
+| **[Arch Migration Blueprint](docs/arch_migration_blueprint.md)** | Storage architecture, tiered 39.2GB swap setup, GNOME + `ly` auto-unlock, and salvage inventory. |
+| **[Documentation Directory](docs/)** | 12 in-depth architectural guides for hardware, kernels, assembly, and virtualization. |
 
 ---
 
-### Phase 2: Fresh Base Installation
-Boot your Arch Linux USB installer and follow [02-arch-installation-guide.md](file:///c:/Users/HP/Documents/GitHub/arch-laptop/docs/02-arch-installation-guide.md).
-Key principle: Allocate **100% of remaining drive space to a single root partition (`/`)** so you never encounter artificial disk constraints again.
+## 🧠 Accessing from Antigravity on the Laptop
 
----
-
-### Phase 3: Post-Installation Automation (On First Boot)
-Clone this repository onto the new installation and run the staged setup scripts:
+To load this entire conversation's brain and memory directly into Antigravity running on the Arch laptop:
 
 ```bash
-git clone https://github.com/<your-username>/arch-laptop.git ~/arch-laptop
-cd ~/arch-laptop
+# 1. Clone this private repository onto the laptop:
+git clone https://github.com/hammadshakeelai/arch-laptop.git ~/arch-laptop
 
-# 1. Base Development, Audio, Microcode, YAY (AUR):
-chmod +x scripts/*.sh
-./scripts/01_post_install.sh
-
-# 2. Ubuntu Look, Centered Dock, and Startup Music:
-./scripts/02_setup_theming_and_sound.sh
-
-# 3. Jupyter C++ Cling & VS Code Integration:
-./scripts/03_setup_jupyter_cling.sh
-
-# 4. 8086 Assembly Workspace (DOSBox, NASM, AFD):
-./scripts/05_setup_dosbox_assembly.sh
-
-# 5. QEMU / KVM Virtualization & Libvirt:
-./scripts/06_setup_virtualization.sh
-
-# 6. Tailscale Mesh & GNOME Remote Desktop:
-./scripts/07_setup_tailscale_rdp.sh
-
-# 7. Install All User Applications (OnlyOffice, VSCodium, Spotify, etc.):
-./scripts/08_install_all_software.sh
+# 2. Sync the brain conversation session into your laptop's Antigravity directory:
+mkdir -p ~/.gemini/antigravity/brain/8985db24-12f2-4ed0-9104-89fcac84b84e
+cp -r ~/arch-laptop/brain/8985db24-12f2-4ed0-9104-89fcac84b84e/* ~/.gemini/antigravity/brain/8985db24-12f2-4ed0-9104-89fcac84b84e/
 ```
+
+Once synced, open `~/arch-laptop` in Antigravity. The agent will have access to the full conversation transcript, system state, and artifacts.
 
 ---
 
-## 🛠️ Repository Architecture
+## ⚡ Active System State on Laptop
+
+### 1. Local AI Workspace
+* **Odysseus AI:** Background systemd service (`odysseus.service`) listening on `http://127.0.0.1:7011`.
+* **Launch:** Click **Odysseus AI** in GNOME App Grid or run `odysseus` in any terminal to open directly in Google Chrome (single-user mode, no login required).
+* **Models in Ollama:**
+  * `huihui_ai/llama3.2-abliterate:3b` (Uncensored / Abliterated 3B model, ~68 tokens/sec on Ryzen CPU).
+  * `llama3.2:3b` (Official Meta Llama 3.2 3B).
+
+### 2. Office & Academic Tools
+* **OnlyOffice Desktop Editors:** Full Microsoft Office ribbon compatibility (`onlyoffice`).
+* **MarkText:** WYSIWYG Markdown editor with live KaTeX math and tables (`marktext`).
+* **TeXstudio & TeXLive:** Offline LaTeX compilation with side-by-side PDF preview (`texstudio`).
+* **LibreOffice Fresh:** Offline office power suite (`libreoffice`).
+
+### 3. Windows 11 Quality-of-Life Parity
+* **Clipboard History (`Super + V`):** Press `Win + V` to open the persistent multi-clip history popup.
+* **Instant Drive Search (`FSearch`):** Instant C/GTK file search across your entire Btrfs drive (`fsearch`).
+* **Spacebar Quick Look:** Press `Space` in Files (Nautilus) on any image, PDF, audio, or video for instant preview.
+* **Right-Click "New Document":** Pre-populated in `~/Templates` with Word (`.docx`), Excel (`.xlsx`), LaTeX (`.tex`), Markdown (`.md`), and Text (`.txt`).
+* **Authentic Windows 11 Fonts:** 35 TrueType fonts installed in `~/.local/share/fonts/windows/` (Calibri, Arial, Times New Roman, Segoe UI, Consolas, Georgia, Verdana).
+* **Android Phone Link (`GSConnect`):** Pair with the KDE Connect app on your Android phone to sync clipboard, transfer files, and send SMS.
+* **Audio & Codecs:** `easyeffects` (laptop speaker bass boost & RNNoise microphone noise suppression), VLC media player, `7zip`, `unrar`, and `file-roller`.
+
+### 4. Memory & Performance Tuning
+* **Total Swap: 39.2 GB:**
+  * `/dev/zram0` (7.2 GB, Priority 100, `zstd` compressed in-RAM swap).
+  * `/swapfile` (32 GB, Priority 10, Btrfs non-CoW dedicated file).
+* **Kernel Sysctl:** `vm.swappiness = 180`, `vm.page-cluster = 0` in `/etc/sysctl.d/99-vm-zram-parameters.conf`.
+* **Lid Switch:** `HandleLidSwitch=ignore` in `/etc/systemd/logind.conf.d/ignore-lid.conf`.
+* **Display Manager:** `ly` greeter with PAM auto-unlock (`pam_gnome_keyring.so`) and `Super + L` screen lock via `gtklock`.
+
+---
+
+## 🛠️ Repository Layout
 
 ```
 arch-laptop/
-├── README.md                              <- Master knowledge base and entry point
-├── docs/                                  <- 12 in-depth architectural guides
-│   ├── 01-storage-and-partitioning.md
-│   ├── 02-arch-installation-guide.md
-│   ├── 03-backup-old-arch.md
-│   ├── 04-ubuntu-look-and-theming.md
-│   ├── 05-circular-alt-tab-switcher.md
-│   ├── 06-bootup-login-music.md
-│   ├── 07-jupyter-cpp-cling-vscode.md
-│   ├── 08-claude-science-environment.md
-│   ├── 09-dosbox-nasm-afd-setup.md
-│   ├── 10-qemu-kvm-vm-migration.md
-│   ├── 11-tailscale-and-remote-desktop.md
-│   └── 12-software-catalog-pacman-aur.md
-├── scripts/                               <- Production-ready automation scripts
-│   ├── backup_old_arch.sh
-│   ├── 01_post_install.sh
-│   ├── 02_setup_theming_and_sound.sh
-│   ├── 03_setup_jupyter_cling.sh
-│   ├── 04_launch_jupyter_vscode.sh
-│   ├── 05_setup_dosbox_assembly.sh
-│   ├── 06_setup_virtualization.sh
-│   ├── 07_setup_tailscale_rdp.sh
-│   └── 08_install_all_software.sh
-├── configs/                               <- Pre-built configs (DOSBox, Dconf, Desktop)
-│   ├── dosbox.conf
-│   ├── ubuntu_shortcuts.dconf
-│   ├── dash_to_dock_settings.dconf
-│   ├── ubuntu-login-sound.desktop
-│   └── jupyter_cxx_kernel.json
-└── packages/                              <- Manifest files
-    ├── pacman-packages.txt
-    └── aur-packages.txt
+├── README.md                              <- Master documentation and system overview
+├── FULL_CHAT_LOG.md                       <- Full conversation record (940+ steps)
+├── brain/                                 <- Machine-readable Antigravity session brain
+│   └── 8985db24-12f2-4ed0-9104-89fcac84b84e/
+│       ├── .system_generated/logs/        <- transcript.jsonl & transcript_full.jsonl
+│       ├── .user_uploaded/                <- Original uploaded screenshots
+│       └── *.md                           <- Session blueprints and metadata
+├── docs/                                  <- Architecture guides & parity blueprints
+│   ├── windows_user_complete_linux_experience.md
+│   ├── arch_migration_blueprint.md
+│   └── 01-12 guides...
+├── scripts/                               <- Staged automation & maintenance scripts
+└── configs/                               <- Dotfiles, dconf dumps, and systemd units
 ```

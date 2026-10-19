@@ -10,14 +10,13 @@ echo "==========================================================================
 echo " [1/4] Installing QEMU, KVM, Libvirt, and Virt-Manager..."
 echo "=========================================================================="
 sudo pacman -S --needed --noconfirm \
-    qemu-full \
+    qemu-desktop \
     libvirt \
     virt-manager \
     virt-viewer \
     dnsmasq \
     iptables-nft \
-    dmidecode \
-    bridge-utils
+    dmidecode
 
 echo "=========================================================================="
 echo " [2/4] Adding current user ($USER) to libvirt and kvm groups..."
@@ -53,8 +52,8 @@ done
 
 if [ -n "$QCOW_SRC" ]; then
     echo "Found VM disk image at: $QCOW_SRC"
-    echo "Copying to /var/lib/libvirt/images/ubuntu-vm.qcow2..."
-    sudo cp "$QCOW_SRC" /var/lib/libvirt/images/ubuntu-vm.qcow2
+    echo "Copying to /var/lib/libvirt/images/ubuntu-vm.qcow2 (sparse allocation)..."
+    sudo cp --sparse=always "$QCOW_SRC" /var/lib/libvirt/images/ubuntu-vm.qcow2
     sudo chown root:kvm /var/lib/libvirt/images/ubuntu-vm.qcow2
     sudo chmod 660 /var/lib/libvirt/images/ubuntu-vm.qcow2
 else
